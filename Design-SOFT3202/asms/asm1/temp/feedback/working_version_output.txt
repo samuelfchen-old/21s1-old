@@ -1,0 +1,30 @@
+> Task :cleanTest
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+au.edu.sydney.hecfor.erp.product.ProductListImplTest > testProductListFindAllMatchApprovalMatchNull FAILED
+    java.lang.AssertionError at ProductListImplTest.java:335
+
+65 tests completed, 1 failed
+
+> Task :jacocoTestReport
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/Users/jburr/Dropbox/Uni/USYD%20work%20docs/SOFT3202%202021/Assignment1/MarkingScript/environment_a1/a1working/build/reports/tests/test/index.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+5 actionable tasks: 5 executed

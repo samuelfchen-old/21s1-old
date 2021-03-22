@@ -1,3 +1,5 @@
+C:\Users\Samuel\Desktop\21s1
+
 git add .
-git commit -m "auto commit from desktop: %date% %time%"
+git commit -m "Shutdown commit from Desktop at %time% %date%."
 git push
