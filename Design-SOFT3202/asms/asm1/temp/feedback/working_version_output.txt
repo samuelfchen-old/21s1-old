@@ -8,10 +8,35 @@
 
 > Task :test FAILED
 
-au.edu.sydney.hecfor.erp.product.ProductListImplTest > testProductListFindAllMatchApprovalMatchNull FAILED
-    java.lang.AssertionError at ProductListImplTest.java:335
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountWrongID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:801 done
 
-65 tests completed, 1 failed
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsMultipleProducts FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:254
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationValidMultiple FAILED
+    org.junit.ComparisonFailure at TGRFacadeImplTest.java:718 done
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNewProvider FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:1022 done?
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDNoneFound FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:648 done
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsOneProduct FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:240
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNamingSchemeReset FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:1036
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsMultipleProductsDuplicate FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:271
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountInvalidID FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:813
+        Caused by: java.lang.IllegalStateException at TGRFacadeImplTest.java:814
+
+148 tests completed, 9 failed
 
 > Task :jacocoTestReport
 
@@ -26,5 +51,5 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 1s
+BUILD FAILED in 2s
 5 actionable tasks: 5 executed
