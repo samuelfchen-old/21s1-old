@@ -1,0 +1,418 @@
+package au.edu.sydney.soft3202.s1y2021.task1;
+
+import org.junit.Test;
+
+import org.junit.Before;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.instanceOf;
+
+ 
+import java.util.List;
+import java.util.ArrayList;
+ 
+public class EnrolmentSystemTest {
+    EnrolmentSystem e;
+
+    @Before
+    public void init() {
+        e = new EnrolmentSystemImpl();
+    }
+
+    @Test 
+    public void testEnrolmentSystemConstruction() {
+        assertNotNull("Enrolment system should not be null", e);
+    }
+
+    /**
+     * .addStudent();
+     */
+
+    @Test 
+    public void testEnrolmentSystemAddStudentValid() {
+        assertNotNull(e.addStudent("123456789", "abcd1234", "samuel", "sam"));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentReturnType() {
+        assertThat(e.addStudent("123456789", "abcd1234", "samuel", "sam"), instanceOf(Student.class));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentExistsInSystem() {
+        Student s = e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        Student check = e.getStudent("123456789");
+        assertEquals(check, s);
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentNotEnrolled() {
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        Student s = e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        assertNull(u.getStudent(s.getSID()));
+    }
+
+    /**
+     * .addStudent() exceptions
+     */
+
+    @Test
+    public void testEnrolmentSystemAddStudentExceptionNullArguments() {
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addStudent(null, null, null, null);
+        });
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentExceptionInvalidArguments() {
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addStudent("1234567890", "abcd1234", "samuel", "sam");
+        });
+
+        // Currently broke
+        // assertThrows(java.lang.IllegalArgumentException.class, () -> {
+        //     e.addStudent("123456789", "abcd1234567890", "samuel", "sam");
+        // });
+
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addStudent("123456789", "abcd1234", "samuelsamuelsamuelsamuelsamuelsamuelsamuelsamuelsamuelsamuelsamuel", "sam");
+        });
+
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addStudent("123456789", "abcd1234", "samuel", "samsamsamsamsamsam");
+        });
+    }
+
+
+    @Test
+    public void testEnrolmentSystemAddStudentExceptionInvalidUniquenessSID() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            e.addStudent("123456789", "abcd5678", "michael", "mike");
+        });
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentExceptionInvalidUniquenessUnikey() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            e.addStudent("123456780", "abcd1234", "michael", "mike");
+        });
+    }
+
+    @Test
+    public void testEnrolmentSystemAddStudentExceptionValidUniquenessName() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        e.addStudent("123456780", "abcd1230", "samuel", "sam");
+
+    }
+
+    /**
+     * .addFaculty();
+     */
+
+    @Test 
+    public void testEnrolmentSystemAddFacultyValid() {
+        assertNotNull(e.addFaculty("software", "soft"));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddFacultyReturnType() {
+        assertThat(e.addFaculty("software", "soft"), instanceOf(Faculty.class));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddFacultyExistsInSystem() {
+        Faculty f = e.addFaculty("software", "soft");
+
+        Faculty check = e.getFaculty("software");
+
+        assertEquals(f, check);
+    }
+
+    /**
+     * .addFaculty(); exceptions
+     */
+
+    @Test
+    public void testEnrolmentSystemAddFacultyExceptionNullArgument() {
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addFaculty(null, null);
+        });
+    }
+
+    @Test
+    public void testEnrolmentSystemAddFacultyExceptionInvalidArgument() {
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addFaculty("softwaresoftwaresoftwaresoftwaresoftwaresoftwaresoftwaresoftwaresoftware", "soft");
+        });
+
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addFaculty("software", "softsoftsoftsoftsoft");
+        });
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddFacultyExceptionInvalidUniquenessName() {
+        e.addFaculty("software", "soft");
+
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            e.addFaculty("software", "soft1");
+        });
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddFacultyExceptionValidUniquenessAbbrv() {
+        e.addFaculty("software", "soft");
+        e.addFaculty("software1", "soft");
+    }
+
+    /**
+     * .addUnit();
+     */
+
+    @Test 
+    public void testEnrolmentSystemAddUnitValid() {
+        e.addFaculty("software", "soft");
+        assertNotNull(e.addUnit("soft3202", "software design", "software"));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddUnitReturnType() {
+        e.addFaculty("software", "soft");
+        assertThat(e.addUnit("soft3202", "software design", "software"), instanceOf(Unit.class));
+    }
+
+    @Test
+    public void testEnrolmentSystemAddUnitExistsInSystem() {
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        List<String> check = f.getUnits();
+        assertEquals(1, check.size());
+
+        assertEquals(u.getCode(), check.get(0));
+    }
+
+    /**
+     * .addUnit(); exceptions
+     */
+
+    @Test 
+    public void testEnrolmentSystemAddUnitExceptionArgumentsNull() {
+        e.addFaculty("software", "soft");
+        
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addUnit(null, null, "software");
+        });
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddUnitExceptionArgumentsInvalid() {
+        e.addFaculty("software", "soft");
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            e.addUnit("soft3202", "software designsoftware designsoftware designsoftware designsoftware designsoftware design", "software");
+        });
+
+        // Currently Broken
+        // assertThrows(java.lang.IllegalArgumentException.class, () -> {
+        //     e.addUnit("soft320222", "software design", "software");
+        // });
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddUnitExceptionUniquenessInvalidCode() {
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            e.addUnit("soft3202", "software design", "software");
+        });
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddUnitExceptionUniquenessValidName() {
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        e.addUnit("soft3203", "software design", "software");
+    }
+
+    @Test 
+    public void testEnrolmentSystemAddUnitExceptionNonExistantFaculty() {
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            e.addUnit("soft3202", "software design", "software");
+        });
+    }
+
+    /**
+     * .getFaculty()
+     */
+
+    @Test
+    public void testEnrolmentSystemGetFacultyNonExistant() {
+        assertNull(e.getFaculty("software"));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetFacultyAbbr() {
+        e.addFaculty("software", "soft");
+        assertNull(e.getFaculty("soft"));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetFacultyValid() {
+        e.addFaculty("software", "soft");
+        Faculty f = e.getFaculty("software");
+        assertEquals(f.getName(), "software");
+    }
+
+    @Test
+    public void testEnrolmentSystemGetFacultyMultiple() {
+        e.addFaculty("software", "soft");
+        e.addFaculty("computing", "comp");
+        Faculty f = e.getFaculty("software");
+        assertEquals(f.getName(), "software");
+    }
+
+    /**
+     * .getStudent();
+     */
+
+    @Test
+    public void testEnrolmentSystemGetStudentNonExistant() {
+        assertNull(e.getStudent("123456789"));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentName() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        assertNull(e.getStudent("samuel"));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentPrefName() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        assertNull(e.getStudent("sam"));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentValidSID() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        Student s = e.getStudent("123456789");
+        assertEquals(s.getSID(), "123456789");
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentValidUniKey() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        Student s = e.getStudent("abcd1234");
+        assertEquals(s.getUnikey(), "abcd1234");
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentMultiple() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        e.addStudent("123456780", "abcd1230", "michael", "mike");
+        Student s = e.getStudent("123456789");
+        assertEquals(s.getSID(), "123456789");
+    }
+
+    /**
+     * .getFaculties();
+     */
+
+    @Test
+    public void testEnrolmentSystemGetFacultiesEmpty() {
+        List<String> faculties = e.getFaculties();
+        
+        assertNotNull(faculties);
+
+        assertEquals(0, faculties.size());
+    }
+
+    @Test
+    public void testEnrolmentSystemGetFacultiesOne() {
+        e.addFaculty("software", "soft");
+
+        List<String> faculties = e.getFaculties();
+
+        assertEquals(1, faculties.size());
+
+        assertEquals("software", faculties.get(0));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetFacultiesMultiple() {
+        e.addFaculty("software", "soft");
+        e.addFaculty("computing", "comp");
+
+        List<String> faculties = e.getFaculties();
+
+        assertEquals(2, faculties.size());
+        
+        assertEquals("software", faculties.get(0));
+        assertEquals("computing", faculties.get(1));
+    }
+
+    /**
+     * .getStudents();
+     */
+
+    @Test
+    public void testEnrolmentSystemGetStudentsEmpty() {
+        List<String> students = e.getStudents();
+        
+        assertNotNull(students);
+
+        assertEquals(0, students.size());
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentsOne() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        List<String> students = e.getStudents();
+
+        assertEquals(1, students.size());
+
+        assertEquals("abcd1234", students.get(0));
+    }
+
+    @Test
+    public void testEnrolmentSystemGetStudentsMultiple() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        e.addStudent("123456780", "abcd1230", "michael", "mike");
+
+        List<String> students = e.getStudents();
+
+        assertEquals(2, students.size());
+        
+        assertEquals("abcd1234", students.get(0));
+        assertEquals("abcd1230", students.get(1));
+    }
+
+    /**
+     * getReport();
+     */
+
+    @Test
+    public void testEnrolmentSystemGetReportEmpty() {
+        String report = e.getReport();
+        assertEquals("Students:\n", report);
+    }
+
+    @Test
+    public void testEnrolmentSystemGetReportNonEmpty() {
+        e.addStudent("123456789", "abcd1234", "samuel", "sam");
+        String report = e.getReport();
+
+        assertEquals("Students:\n\t123456789 abcd1234 samuel sam\n", report);
+    }
+
+}

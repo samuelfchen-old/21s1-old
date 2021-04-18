@@ -1,0 +1,131 @@
+package au.edu.sydney.soft3202.s1y2021.task1;
+
+import org.junit.Test;
+
+import org.junit.Before;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.instanceOf;
+
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class BugTest {
+    @Test
+    public void bugOneNoEnrolled() {
+        EnrolmentSystem e = new EnrolmentSystem();
+
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        Student s = e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        u.enrolStudent(s);
+
+        assertEquals("Students:\n\t123456789 abcd1234 samuel sam\nsoft software\n\tsoft3202 software design\n\t\t123456789 abcd1234 samuel sam\n", e.getReport());
+    }
+
+    @Test
+    public void bugTwoPreferredNameNull() {
+        Student s = new Student("123456789", "abcd1234", "samuel", "sam");
+
+        s.setPreferredName(null);
+        s.setPreferredName("");
+    }
+
+    @Test
+    public void bugThreeGetUnit() {
+        Faculty f = new Faculty("software", "soft");
+        f.addUnit(new Unit("soft3202", "software design"));
+        f.addUnit(new Unit("comp2017", "systems programming"));
+
+        Unit check = f.getUnit("comp2017");
+
+        assertEquals("comp2017", check.getCode());
+    }
+
+    @Test
+    public void bugFourWithdrawStudent() {
+        Student s = new Student("123456789", "abcd1234", "samuel", "sam");
+        Faculty f = new Faculty("software", "soft");
+        Unit u = new Unit("soft3202", "software design");
+
+        f.addUnit(u);
+        u.enrolStudent(s);
+        u.withdrawStudent(s);
+
+        assertNull(u.getStudent(s.getSID()));
+    }
+
+    @Test
+    public void bugFiveEnrolmentDefaultUnit() {
+        EnrolmentSystem e = new EnrolmentSystem();
+
+        Faculty f = e.addFaculty("software", "soft");
+        Unit u = e.addUnit("soft3202", "software design", "software");
+
+        Student s = e.addStudent("123456789", "abcd1234", "samuel", "sam");
+
+        assertNull(u.getStudent(s.getSID()));
+    }
+
+    @Test 
+    public void bugEightTruncatedGetAbbr() {
+        EnrolmentSystem e = new EnrolmentSystem();
+
+        Faculty f = e.addFaculty("software", "newabbrev");
+        assertEquals("newabbrev", f.getAbbreviation());
+    }
+
+    @Test
+    public void bugNineEnrolStudentClone() {
+        Student s1 = new Student("123456789", "abcd1234", "samuel", "sam");
+        Student s2 = new Student("123456789", "abcd1234", "samuel", "sam");
+
+        Faculty f = new Faculty("software", "soft");
+        Unit u = new Unit("soft3202", "software design");
+
+        u.enrolStudent(s1);
+
+        assertThrows(java.lang.IllegalStateException.class, () -> {
+            u.enrolStudent(s2);
+        });
+    }
+
+    // Faculty.getAbbreviation will return a truncated version of the faculty's name instead of the abbreviation it was given.
+    // Unit.enrolStudent will happily enrol a student with a matching SID and/or unikey to an already enrolled student.
+
+    @Test
+    public void bugSixteenReportOnce() {
+        EnrolmentSystem e = new EnrolmentSystem();
+
+        e.getReport();
+        assertNotNull(e.getReport());
+    }
+
+    @Test
+    public void bugSeventeenPrefName() {
+        Student s = new Student("123456789", "abcd1234", "samuel", null);
+
+        assertNull(s.getPreferredName());
+    }
+
+    @Test 
+    public void bugEighteenFacultyConstructor() {
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            Faculty f = new Faculty(null, "softwaresoftware");
+        });
+    }
+
+    @Test 
+    public void bugNineteenGetStudentSID() {
+        Student s = new Student("123456789", "abcd1234", "samuel", "sam");
+
+        Faculty f = new Faculty("software", "soft");
+        Unit u = new Unit("soft3202", "software design");
+
+        u.enrolStudent(s);
+
+        assertEquals(s, u.getStudent("123456789"));
+    }
+}
