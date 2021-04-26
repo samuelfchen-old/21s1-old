@@ -1,0 +1,41 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+
+> Task :compileTestJava FAILED
+C:\Users\jbur2821\Dropbox\Uni\USYD work docs\SOFT3202 2021\Assignment1\MarkingScript\environment_a2\a2workingtgr\src\test\java\au\edu\sydney\hecfor\erp\tgr\TGRFacadeImplTest.java:22: error: cannot find symbol
+        pl = new ProductListImpl();
+                 ^
+  symbol:   class ProductListImpl
+  location: class TGRFacadeImplTest
+C:\Users\jbur2821\Dropbox\Uni\USYD work docs\SOFT3202 2021\Assignment1\MarkingScript\environment_a2\a2workingtgr\src\test\java\au\edu\sydney\hecfor\erp\tgr\TGRFacadeImplTest.java:1160: error: cannot find symbol
+        ProductList pl2 = new ProductListImpl();
+                              ^
+  symbol:   class ProductListImpl
+  location: class TGRFacadeImplTest
+C:\Users\jbur2821\Dropbox\Uni\USYD work docs\SOFT3202 2021\Assignment1\MarkingScript\environment_a2\a2workingtgr\src\test\java\au\edu\sydney\hecfor\erp\tgr\TGRFacadeImplTest.java:1174: error: cannot find symbol
+        ProductList pl2 = new ProductListImpl();
+                              ^
+  symbol:   class ProductListImpl
+  location: class TGRFacadeImplTest
+C:\Users\jbur2821\Dropbox\Uni\USYD work docs\SOFT3202 2021\Assignment1\MarkingScript\environment_a2\a2workingtgr\src\test\java\au\edu\sydney\hecfor\erp\tgr\TGRFacadeImplTest.java:1188: error: cannot find symbol
+        ProductList pl2 = new ProductListImpl();
+                              ^
+  symbol:   class ProductListImpl
+  location: class TGRFacadeImplTest
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileTestJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 0s
+3 actionable tasks: 3 executed

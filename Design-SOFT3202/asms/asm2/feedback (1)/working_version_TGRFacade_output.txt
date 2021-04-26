@@ -1,0 +1,289 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationsInvalidID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidZeroCount FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountZero FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageStorageIDNotUnique FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductReplaceProviderAddProduct FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountWrongID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsMultipleProducts FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationValidMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidIdentical FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountInvalidCount FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNewProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageNoMatchProduct FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationsWrongID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductTGRAddProductInternal FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullFinal FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderAddProductExternal FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsEmptyNoProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageNonExistentProduct FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalInvalidStatus FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountWrongID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDNonExistantProductID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsEmpty FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalNoMatchFinalised FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidEmpty FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalNoMatch FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsEmptyNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsOne FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesNoProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsMultipleDuplicate FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidPostConditions FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderAssignApprovalStatus FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRConstructionProviderIsNull FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalValidFinalisedExternal FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidEmptyNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageStorageIDInvalid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductInitialValues FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalInvalidStatusCaseSensitive FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountWrongID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDEmpty FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDValid FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalBackwards FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountModifyZero FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountInvalidID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidSingle FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDNoneFound FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountInvalidID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidExternalAdd FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsOneProduct FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNamingSchemeReset FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountInvalidModifier FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsEmpty FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductDuplicate FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDInvalidProductID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRViewAllProductsMultipleProductsDuplicate FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetAllProductsExternal FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalInvalidID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullSingle FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationsNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalValidFinalised FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullUnique FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDNullProvider FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidMultipleAuto FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountMultiple FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountInvalidID FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRConstructionNotNull FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductInvalidArguments FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageStorageIDNullAfter FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddProductNoRestrictions FAILED
+    org.mockito.exceptions.misusing.InvalidUseOfMatchersException at TGRFacadeImplTest.java:41
+
+88 tests completed, 88 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/Users/jbur2821/Dropbox/Uni/USYD%20work%20docs/SOFT3202%202021/Assignment1/MarkingScript/environment_a2/a2workingtgr/build/reports/tests/test/index.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+4 actionable tasks: 4 executed

@@ -1,0 +1,176 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1226
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidZeroCount FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:624
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountZero FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1261
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageStorageIDNotUnique FAILED
+    java.lang.AssertionError at TGRFacadeImplTest.java:736
+        Caused by: java.lang.IllegalStateException at TGRFacadeImplTest.java:737
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountWrongID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1104
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsDefault FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1555
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationValidMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1007
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidIdentical FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:606
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1135
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountInvalidCount FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1208
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNewProvider FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1393
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1568
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:915
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationsWrongID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1034
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:573
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1242
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1065
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullFinal FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:686
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountWrongID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1181
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageCountMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1151
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsInvalidEmail FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1674
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:257
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesNoProvider FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:815
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetPreferencesInvalidPreconditions FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1730
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidPostConditions FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:647
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderAssignApprovalStatus FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1367
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContacts FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1541
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageLocationValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:995
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidEmptyNullProvider FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:831
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageContactsInvalidID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1704
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsStrangeCharacters FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1587
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountWrongID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1300
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDEmpty FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:946
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDValid FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:898
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalBackwards FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:319
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountModifyZero FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1274
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidSingle FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:841
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesIDNoneFound FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:934
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidExternalAdd FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:636
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetProductProviderNamingSchemeReset FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1407
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRModifyStorageCountInvalidModifier FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1327
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsInvalidFax FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1645
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:855
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:588
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullSingle FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:661
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAssignApprovalValidFinalised FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:286
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRAddStorageValidNullUnique FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:672
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStoragesValidMultipleAuto FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:875
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRSetStorageContactsInvalidStorageID FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1624
+
+au.edu.sydney.hecfor.erp.tgr.TGRFacadeImplTest > testTGRGetStorageCountMultiple FAILED
+    java.lang.IllegalStateException at TGRFacadeImplTest.java:1077
+
+108 tests completed, 50 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/Users/jbur2821/Dropbox/Uni/USYD%20work%20docs/SOFT3202%202021/Assignment1/MarkingScript/environment_a2/a2workingtgr/build/reports/tests/test/index.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2s
+4 actionable tasks: 4 executed
