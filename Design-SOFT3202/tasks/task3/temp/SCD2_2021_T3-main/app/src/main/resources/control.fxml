@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SCD2_2021_T3.Control">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button layoutX="732.0" layoutY="560.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            <TextArea fx:id="details" layoutX="14.0" layoutY="552.0" prefHeight="42.0" prefWidth="334.0" text="Username:&#10;Token: " />
+            <Separator layoutX="348.0" layoutY="-8.0" orientation="VERTICAL" prefHeight="609.0" prefWidth="10.0" />
+            <Button fx:id="availableLoans" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLoans" text="Show Available Loans" />
+            <Separator layoutX="15.0" layoutY="155.0" prefHeight="12.0" prefWidth="334.0" />
+            <Label fx:id="error" layoutX="372.0" layoutY="564.0" text="Error: " textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="loanStart" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" onAction="#startLoan" text="Start Loan" />
+            <ComboBox fx:id="availableLoansList" layoutX="93.0" layoutY="52.0" prefWidth="150.0" promptText="Loan" />
+            <Button fx:id="currentLoans" layoutX="15.0" layoutY="88.0" mnemonicParsing="false" onAction="#viewCurrentLoans" text="Show Current Loans" />
+            <Button fx:id="availableShips" layoutX="15.0" layoutY="173.0" mnemonicParsing="false" onAction="#showAvailableShips" text="Show Available Ships" />
+            <Label fx:id="credits" layoutX="372.0" layoutY="18.0" text="Credits: ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="shipBuy" layoutX="15.0" layoutY="213.0" mnemonicParsing="false" onAction="#buyShip" text="Buy Ship" />
+            <ComboBox fx:id="availableShipsList" layoutX="85.0" layoutY="213.0" prefWidth="150.0" promptText="Ship" />
+            <Button fx:id="ownedShips" layoutX="15.0" layoutY="249.0" mnemonicParsing="false" onAction="#seeOwnedShips" text="Show Owned Ships" />
+            <Button fx:id="loanPay" layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onAction="#payLoan" text="Pay Loan" />
+            <ComboBox fx:id="currentLoansList" layoutX="93.0" layoutY="121.0" prefWidth="150.0" promptText="Loan" />
+            <Button fx:id="fuelBuy" layoutX="14.0" layoutY="284.0" mnemonicParsing="false" onAction="#buyFuel" text="Buy Fuel" />
+            <Separator layoutX="15.0" layoutY="317.0" prefHeight="12.0" prefWidth="334.0" />
+            <Button fx:id="marketplace" layoutX="15.0" layoutY="329.0" mnemonicParsing="false" onAction="#viewMarketplace" text="View Marketplace" />
+            <Button fx:id="goodsBuy" layoutX="16.0" layoutY="363.0" mnemonicParsing="false" onAction="#buyGoods" text="Buy Goods" />
+            <TextField fx:id="buyAmount" layoutX="259.0" layoutY="363.0" prefHeight="25.0" prefWidth="80.0" promptText="Amount" />
+            <TextField fx:id="fuelAmount" layoutX="243.0" layoutY="284.0" prefHeight="25.0" prefWidth="80.0" promptText="Amount" />
+            <Separator layoutX="14.0" layoutY="427.0" prefHeight="12.0" prefWidth="334.0" />
+            <Button fx:id="goodsSell" layoutX="16.0" layoutY="394.0" mnemonicParsing="false" onAction="#sellGoods" text="Sell Goods" />
+            <TextField fx:id="sellAmount" layoutX="259.0" layoutY="394.0" prefHeight="25.0" prefWidth="80.0" promptText="Amount" />
+            <Button fx:id="flightplanStart" layoutX="14.0" layoutY="474.0" mnemonicParsing="false" onAction="#startFlightPlan" text="Start Flight Plan" />
+            <Button fx:id="nearby" layoutX="15.0" layoutY="439.0" mnemonicParsing="false" onAction="#listNearbyLocations" text="List Nearby Locations" />
+            <Button fx:id="flightplanView" layoutX="14.0" layoutY="509.0" mnemonicParsing="false" onAction="#viewFlightPlan" text="View Flight Plan" />
+          <AnchorPane layoutX="366.0" layoutY="39.0" minHeight="0.0" minWidth="0.0" prefHeight="514.0" prefWidth="417.0">
+               <children>
+                  <ScrollPane prefHeight="514.0" prefWidth="417.0">
+                     <content>
+                        <Label fx:id="display" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" prefWidth="414.0" wrapText="true" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="fuelShip" layoutX="85.0" layoutY="284.0" prefWidth="150.0" promptText="Ship" />
+            <ComboBox fx:id="buyFromShip" layoutX="134.0" layoutY="329.0" prefWidth="150.0" promptText="Ship" />
+            <TextField fx:id="buyType" layoutX="104.0" layoutY="363.0" prefHeight="25.0" prefWidth="144.0" promptText="Good" />
+            <TextField fx:id="sellType" layoutX="104.0" layoutY="394.0" prefHeight="25.0" prefWidth="144.0" promptText="Good" />
+            <TextField fx:id="destination" layoutX="133.0" layoutY="474.0" prefHeight="25.0" prefWidth="144.0" promptText="Destination" />
+            <ComboBox fx:id="travelShip" layoutX="160.0" layoutY="439.0" prefWidth="150.0" promptText="Ship" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
